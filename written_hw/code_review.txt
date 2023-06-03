@@ -1,0 +1,14 @@
+CODE REVIEW
+Reviewer: Jose Monagas 
+Subject: Mimi Z.
+
+1- What the code does well.
+The code looks clean and follows the DRY principles. 
+
+2- Suggestions for improvement. Be specific and explain why you believe your suggestion would improve the code.
+One improvement would be to add gameBoard as a parameter in the checkWin function instead of relying on the fact that gameBoard is a global variable. This will also make it easier for the reader to understand the function at a glance. 
+
+3- Any parts of the code that were unclear to you, and suggestions for how they could be made more understandable.
+Although the code was generally comprehensible, incorporating additional comments would enhance its readability and allow other individuals to quickly grasp the main objectives and functionality of the code. By providing concise explanations throughout the code, it would become more accessible and user-friendly to a wider audience.
+Notable strengths of the coder's style or approach.
+The code demonstrates that the coder understands how to implement loops to iterate through arrays and come up with winning conditions for a board game.  Additionally, the coder has implemented DRY principles that have made the code efficient and easy to read. 
