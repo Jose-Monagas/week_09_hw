@@ -56,6 +56,35 @@ app.get("/magic/:question", (req, res) => {
   res.send(htm);
 });
 
+function checkFibonacci(n) {
+  if (n == 0 || n == 1) {
+    return true;
+  }
+  prev = 0;
+  curr = 1;
+  while (n >= curr) {
+    tmp = curr;
+    curr = curr + prev;
+    prev = tmp;
+    if (curr == n) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+app.get("/fibonacci/:param", (req, res) => {
+  const param = req.params.param;
+  const isFibonacci = checkFibonacci(param);
+  if (isFibonacci) {
+    res.send(`<h1>Very good. It is Fibonacci</h1>`);
+  } else {
+    text = `<h1>I can tell this is not a fibonacci number</h1>`;
+  }
+  res.send(text);
+});
+
 // Tell the server to listen for request
 app.listen(port, () => {
   console.log(`I'm listening of port ${port}`);
